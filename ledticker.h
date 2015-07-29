@@ -20,7 +20,7 @@
 #ifndef LEDTICKER_LEDTICKER_H_
 #define LEDTICKER_LEDTICKER_H_
 
-extern unsigned char conversionTable[2][67];
+extern const unsigned char conversionTable[2][67];
 
 bool fileExists(const std::string &filename);
 void parseFile(const std::string &filename,
