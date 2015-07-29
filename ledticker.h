@@ -20,19 +20,11 @@
 #ifndef LEDTICKER_LEDTICKER_H_
 #define LEDTICKER_LEDTICKER_H_
 
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <sstream>
-#include <vector>
-#include <unistd.h>
-#include <algorithm>
-
 extern unsigned char conversionTable[2][67];
 
 bool fileExists(const std::string &filename);
 void parseFile(const std::string &filename,
- std::vector<std::string> &inputVector);
+  std::vector<std::string> &inputVector);
 std::string generateText(const std::vector<std::string> &text);
 void convertTextIso8859_15(std::string &inputText);
 int generateChecksum(const std::string &sendString);

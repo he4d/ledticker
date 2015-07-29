@@ -17,6 +17,10 @@
  * along with ledticker. If not, see <http://www.gnu.org/licenses/>.
  */
 
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <unistd.h>
 #include "ledticker.h"
 
 int main(int argc, char **argv) {

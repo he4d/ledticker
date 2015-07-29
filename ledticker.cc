@@ -17,6 +17,12 @@
 * along with ledticker. If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <vector>
+#include <algorithm>
 #include "ledticker.h"
 
 #define deviceFile "/dev/ttyUSB0"
@@ -65,7 +71,7 @@ void parseFile(const std::string &filename,
   std::ifstream theFile;
   theFile.open(filename.c_str());
   if(!theFile.is_open()) {
-    std::cout << "Could not open the file!" << std::endl;
+    std::cerr << "Could not open the file!" << std::endl;
   }
   else {
     while(std::getline(theFile,temp)) {
