@@ -132,7 +132,7 @@ void convertTextIso8859_15(std::string &inputText) {
  */
 int generateChecksum(const std::string &sendString) {
   int value = 0;
-  for(int i = 0; i < sendString.length(); i++) {
+  for(uint i = 0; i < sendString.length(); i++) {
     value ^= (int)sendString[i];
   }
   return value;
